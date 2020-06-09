@@ -19,5 +19,17 @@ class Landmark
             landmark.city == city
         end
     end
+
+    def trips
+        #looking through trip.all to select any trips whose landmark is self
+        Trip.all.select {|trip| trip.landmark == self}
+    end 
+
+    def tourists
+        #runs self.trips and gives us just the tourists
+        self.trips.map do |trip| 
+            trip.tourist
+        end
+    end
     
 end
