@@ -18,6 +18,13 @@ class Tourist
             tourist.name == name
         end
     end
+
+    def trips
+        #looking through trip.all
+        #looking through trip.all to select trips = self
+        
+        binding.pry
+    end 
     
 end
 
